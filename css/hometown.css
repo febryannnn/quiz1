@@ -51,15 +51,40 @@
   box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
 }
 
+/* Lapisan kedua bisa ditambahkan dengan pseudo-element */
+#hometown .gambar-sby::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;               /* sesuai ukuran gambar kedua */
+  height: 450px;
+  background-image: url("../photo/surabaya/hp2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 2;
+}
+
 #hometown .gambar-sby {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
+
+  /* Background utama */
+  background-image: url("../photo/surabaya/element2.png");
+  background-size: cover;      /* sesuaikan agar menutupi container */
+  background-position: center; /* posisikan di tengah */
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 450px;               /* sesuaikan tinggi container */
+  z-index: 0;
 }
 
-#hometown .gambar-sby img:first-child {
+/* #hometown .gambar-sby img:first-child {
   opacity: 20%;
   max-width: 1700px;
   position: absolute;
@@ -76,7 +101,7 @@
   max-height: 450px;
   position: relative;
   z-index: 2;
-}
+} */
 
 #hometown .teks-sby {
   z-index: 3;
