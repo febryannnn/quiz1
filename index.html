@@ -12,79 +12,22 @@
     <link rel="stylesheet" href="./css/profile.css">
     <link rel="stylesheet" href="./css/tourist.css">
     <link rel="icon" href="photo/kartun.png" type="image/png">
+
 </head>
 <body>
     <nav class="navbar">
         <ul class="nav-menu">
-            <li><a href="#" class="nav-link active">Home</a></li>
-            <li><a href="#profile" class="nav-link">Profile</a></li>
-            <li><a href="#hometown" class="nav-link">Hometown</a></li>
-            <li><a href="#food" class="nav-link">Food</a></li>
-            <li><a href="#tourist" class="nav-link">Tourist</a></li>
+            <li><a href="/quiz1/" onclick="route()" class="nav-link active">Home</a></li>
+            <li><a href="/quiz1/profile" onclick="route()" class="nav-link" >Profile</a></li>
+            <li><a href="/quiz1/hometown"onclick="route()" class="nav-link">Hometown</a></li>
+            <li><a href="/quiz1/food" onclick="route()" class="nav-link">Food</a></li>
+            <li><a href="/quiz1/tourist" onclick="route()" class="nav-link">Tourist</a></li>
         </ul>
     </nav>
-    <div id="main-page"></div>
+
+    <!-- <div id="main-page"> </div> -->
+    <div id="main-page"> </div>
     
-    <script>
-        // HASH-BASED ROUTING - KOMPATIBEL UNTUK GITHUB PAGES
-        const routes = {
-            404: "/pages/404.html",
-            "": "/pages-client/index.html",
-            "home": "/pages-client/index.html", 
-            "profile": "/pages-client/profile-client.html",
-            "hometown": "/pages-client/hometown-client.html",
-            "food": "/pages-client/food-client.html",
-            "tourist": "/pages-client/tourist-client.html"
-        };
-
-        const handleLocation = async () => {
-            // Ambil hash tanpa tanda #
-            const hash = window.location.hash.slice(1) || "";
-            const route = routes[hash] || routes[404];
-            
-            try {
-                const html = await fetch(route).then((data) => data.text());
-                document.getElementById("main-page").innerHTML = html;
-                
-                // Update active nav link
-                updateActiveNav(hash);
-            } catch (error) {
-                console.log('Error loading page:', error);
-                // Fallback jika file tidak ditemukan
-                document.getElementById("main-page").innerHTML = '<h1>Page Not Found</h1>';
-            }
-        };
-
-        const updateActiveNav = (currentHash) => {
-            // Hapus class active dari semua nav-link
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('active');
-            });
-            
-            // Tambah class active ke link yang sesuai
-            const activeLink = document.querySelector(`a[href="#${currentHash}"]`) || 
-                              document.querySelector('a[href="#"]');
-            if (activeLink) {
-                activeLink.classList.add('active');
-            }
-        };
-
-        // Event listener untuk hash change
-        window.addEventListener('hashchange', handleLocation);
-        
-        // Load halaman pertama kali
-        window.addEventListener('load', handleLocation);
-        
-        // Handle click pada nav links
-        document.addEventListener('click', (e) => {
-            if (e.target.classList.contains('nav-link')) {
-                e.preventDefault();
-                const href = e.target.getAttribute('href');
-                if (href.startsWith('#')) {
-                    window.location.hash = href;
-                }
-            }
-        });
-    </script>
 </body>
+<script src="script.js"></script>
 </html>

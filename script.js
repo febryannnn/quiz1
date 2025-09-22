@@ -1,48 +1,28 @@
-// Daftar rute
-const routes = {
-  404: "/pages/404.html",
-  "/quiz": "/pages-client/index.html",
-  "/quiz/profile": "/pages-client/profile-client.html",
-  "/quiz/hometown": "/pages-client/hometown-client.html",
-  "/quiz/food": "/pages-client/food-client.html",
-  "/quiz/tourist": "/pages-client/tourist-client.html"
-};
-
-// Navigasi saat klik link
+// CLIENT SIDE ROUTING
 const route = (event) => {
-  event.preventDefault();
-  // ambil href hash tanpa #
-  const hash = event.currentTarget.getAttribute('href').replace('#', '');
-  window.location.hash = hash;
-  handleLocation();
+    event = event || window.event;
+    event.preventDefault();
+    window.history.pushState({}, "", event.target.href);
+    handleLocation();
 };
 
-// Load konten sesuai hash
+const routes = {
+    404: "/quiz1-web/pages/404.html",
+    "/quiz1": "/quiz1-web/pages-client/index.html",
+    "/quiz1/profile": "/quiz1-web/pages-client/profile-client.html",
+    "/quiz1/hometown": "/quiz1-web/pages-client/hometown-client.html",
+    "/quiz1/food": "/quiz1-web/pages-client/food-client.html",
+    "/quiz1/tourist": "/quiz1-web/pages-client/tourist-client.html"
+};
+
 const handleLocation = async () => {
-  // ambil hash, default "/quiz"
-  const path = window.location.hash.replace("#", "") || "/quiz";
-  const routePath = routes[path] || routes[404];
-
-  try {
-    const html = await fetch(routePath).then(res => res.text());
-    document.getElementById("main-page").innerHTML = html.trim();
-  } catch (err) {
-    document.getElementById("main-page").innerHTML = "<h2>Error loading page</h2>";
-    console.error(err);
-  }
-
-  // update active class navbar
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.classList.remove('active');
-    if(link.getAttribute('href') === '#' + path){
-      link.classList.add('active');
-    }
-  });
+    const path = window.location.pathname;
+    const route = routes[path] || routes[404];
+    const html = await fetch(route).then((data) => data.text());
+    document.getElementById("main-page").innerHTML = html;
 };
 
-// Handle back/forward button
-window.onhashchange = handleLocation;
-
-// Jalankan pertama kali
-handleLocation();
+window.onpopstate = handleLocation;
 window.route = route;
+
+handleLocation();
