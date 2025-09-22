@@ -1,61 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <title>Home</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/food.css">
-    <link rel="stylesheet" href="css/hometown.css">
-    <link rel="stylesheet" href="css/profile.css">
-    <link rel="stylesheet" href="css/tourist.css">
-    <link rel="icon" href="photo/kartun.png" type="image/png">
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz SPA</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/hometown.css">
+  <link rel="stylesheet" href="css/profile.css">
+  <link rel="stylesheet" href="css/food.css">
+  <link rel="stylesheet" href="css/tourist.css">
+  <link rel="icon" href="photo/kartun.png" type="image/png">
 </head>
 <body>
-    <nav class="navbar">
-        <ul class="nav-menu">
-            <li><a href="/quiz/" onclick="route()" class="nav-link active">Home</a></li>
-            <li><a href="/quiz/profile" onclick="route()" class="nav-link" >Profile</a></li>
-            <li><a href="/quiz/hometown"onclick="route()" class="nav-link">Hometown</a></li>
-            <li><a href="/quiz/food" onclick="route()" class="nav-link">Food</a></li>
-            <li><a href="/quiz/tourist" onclick="route()" class="nav-link">Tourist</a></li>
-        </ul>
-    </nav>
 
-    <!-- <div id="main-page"> </div> -->
-    <div id="main-page"> </div>
-    <!-- <div id="app">
-        <div class="container">
-            <div class="container-item">
-                <div class="text-container">
-                    <div class="text">
-                        <h2>Hello, Welcome to My Website🙋‍♂️</h2>
-                        <div class="wave-container">
-                            <div class="wave-text">
-                                <span>I</span><span>'m</span>
-                                <span>F</span><span>a</span><span>r</span><span>e</span><span>l</span>
-                                <span> F</span><span>e</span><span>b</span><span>r</span><span>y</span><span>a</span><span>n</span>
-                            </div>
-                        </div>
-                        <p>A first-year Informatics Engineering student at ITS Surabaya, passionate about learning, joining competitions, and contributing positively to society</p>
-                    </div>
-                    <div class="button">
-                        <button>Javascript</button>
-                        <button>C/C++</button>
-                        <button>Python</button>
-                        <button>SQL Database</button>
-                    </div>
-                </div>
-            </div>
-            <div class="foto">
-                <img src="photo/kartun.png" alt="">
-            </div>
-        </div>
-    </div> -->
+  <nav class="navbar">
+    <ul class="nav-menu">
+      <li><a href="#/quiz" class="nav-link active" onclick="route(event)">Home</a></li>
+      <li><a href="#/quiz/profile" class="nav-link" onclick="route(event)">Profile</a></li>
+      <li><a href="#/quiz/hometown" class="nav-link" onclick="route(event)">Hometown</a></li>
+      <li><a href="#/quiz/food" class="nav-link" onclick="route(event)">Food</a></li>
+      <li><a href="#/quiz/tourist" class="nav-link" onclick="route(event)">Tourist</a></li>
+    </ul>
+  </nav>
 
+  <div id="main-page"></div>
+
+  <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
