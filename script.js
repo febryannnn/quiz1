@@ -23,6 +23,7 @@ const handleLocation = async () => {
   const path = window.location.pathname;
   console.log(path)
   const route = routes[path] || routes["/quiz1"];
+  console.log(route)
   const html = await fetch(route).then((data) => data.text());
   document.getElementById("main-page").innerHTML = html;
 
