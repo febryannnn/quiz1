@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/food.css">
+    <link rel="stylesheet" href="./css/hometown.css">
+    <link rel="stylesheet" href="./css/profile.css">
+    <link rel="stylesheet" href="./css/tourist.css">
+    <link rel="icon" href="photo/kartun.png" type="image/png">
+    <script>
+        // Redirect semua 404 ke index.html dengan hash yang sesuai
+        (function() {
+            const path = window.location.pathname;
+            let redirect = '/';
+            
+            // Mapping path ke hash
+            if (path.includes('/profile')) {
+                redirect = '/#profile';
+            } else if (path.includes('/hometown')) {
+                redirect = '/#hometown';  
+            } else if (path.includes('/food')) {
+                redirect = '/#food';
+            } else if (path.includes('/tourist')) {
+                redirect = '/#tourist';
+            }
+            
+            // Redirect ke index.html dengan hash yang sesuai
+            window.location.replace(redirect);
+        })();
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-menu">
+            <li><a href="#" class="nav-link active">Home</a></li>
+            <li><a href="#profile" class="nav-link">Profile</a></li>
+            <li><a href="#hometown" class="nav-link">Hometown</a></li>
+            <li><a href="#food" class="nav-link">Food</a></li>
+            <li><a href="#tourist" class="nav-link">Tourist</a></li>
+        </ul>
+    </nav>
+    <div id="main-page">
+        <h1>Redirecting...</h1>
+    </div>
+</body>
+</html>
