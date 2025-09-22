@@ -11,7 +11,7 @@ const style_css = document.getElementById("page-style");
 
 
 const routes = {
-  "/quiz1": { html: "/quiz1/pages-client/index.html", css: "/quiz1/css/home.css" },
+  "/quiz1": { html: "/quiz1/pages-client/index.html", css: "/quiz1/css/style.css" },
   "/quiz1/profile": { html: "/quiz1/pages-client/profile-client.html", css: "/quiz1/css/profile.css" },
   "/quiz1/hometown": { html: "/quiz1/pages-client/hometown-client.html", css: "/quiz1/css/hometown.css" },
   "/quiz1/food": { html: "/quiz1/pages-client/food-client.html", css: "/quiz1/css/food.css" },
