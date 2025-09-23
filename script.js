@@ -4,7 +4,7 @@ const navLinks = document.querySelectorAll(".nav-link");
 
 function setActiveNavbar(path) {
   navLinks.forEach((link) => {
-    // link.classList.remove(".active");
+    link.classList.remove(".active");
     if (link.getAttribute("href") === path) {
         console.log(`${link.getAttribute("href")} dan ${path}`)
       link.classList.add("active");
