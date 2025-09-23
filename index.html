@@ -1,41 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <!-- untuk deploy di github -->
-    <link id="page-style" rel="stylesheet">
+    <link id="page-style" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libertinus+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- untuk run di lokal -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/food.css">
-    <link rel="stylesheet" href="css/hometown.css">
-    <link rel="stylesheet" href="css/profile.css">
-    <link rel="stylesheet" href="css/tourist.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/food.css" />
+    <link rel="stylesheet" href="css/hometown.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+    <link rel="stylesheet" href="css/tourist.css" />
 
-  
-    <link rel="icon" href="/quiz1/photo/kartun.png" type="image/png">
-
-</head>
-<body>
+    <link rel="icon" href="/quiz1/photo/kartun.png" type="image/png" />
+  </head>
+  <body>
     <nav id="navbar" class="navbar">
-        <ul class="nav-menu">
-            <li><a href="/quiz1" onclick="route()" class="nav-link active">Home</a></li>
-            <li><a href="/quiz1/profile" onclick="route()"  class="nav-link" >Profile</a></li>
-            <li><a href="/quiz1/hometown"onclick="route()" class="nav-link">Hometown</a></li>
-            <li><a href="/quiz1/food" onclick="route()" class="nav-link">Food</a></li>
-            <li><a href="/quiz1/tourist" onclick="route()" class="nav-link">Tourist</a></li>
-        </ul>
+      <ul class="nav-menu">
+        <li>
+          <a href="/quiz1" onclick="route()" class="nav-link active">Home</a>
+        </li>
+        <li>
+          <a href="/quiz1/profile" onclick="route()" class="nav-link"
+            >Profile</a
+          >
+        </li>
+        <li>
+          <a href="/quiz1/hometown" onclick="route()" class="nav-link"
+            >Hometown</a
+          >
+        </li>
+        <li>
+          <a href="/quiz1/food" onclick="route()" class="nav-link">Food</a>
+        </li>
+        <li>
+          <a href="/quiz1/tourist" onclick="route()" class="nav-link"
+            >Tourist</a
+          >
+        </li>
+      </ul>
     </nav>
 
     <!-- <div id="main-page"> </div> -->
-    <div id="main-page"> </div>
-    
-</body>
-<!-- untuk deploy di github -->
-<script src="script.js"></script>
+    <div id="main-page"></div>
+  </body>
+  <!-- untuk deploy di github -->
+  <script src="script.js"></script>
 
-<!-- untuk run di lokal -->
-<!-- <script src="script.js"></script> -->
+  <!-- untuk run di lokal -->
+  <!-- <script src="script.js"></script> -->
 </html>
