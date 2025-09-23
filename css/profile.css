@@ -59,13 +59,13 @@
 
 }
 
-#profile body {
+#profile {
   font-family: var(--font-primary);
   background: 
     radial-gradient(ellipse 80% 50% at 50% -20%, rgba(124, 58, 237, 0.1), transparent 60%),
     radial-gradient(ellipse 60% 40% at 80% 80%, rgba(0, 212, 255, 0.08), transparent 60%),
     var(--bg-primary);
-  color: var(--text-primary);
+  /* color: var(--text-primary); */
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -74,83 +74,6 @@
   /* background-color: black; */
 }
 
-#profile .navbar {
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1000;
-            background:transparent;
-            backdrop-filter: blur(10px);
-            border-radius: 50px;
-            padding: 12px 30px;
-        }
-
-        #profile .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-            align-items: center;
-        }
-
-        #profile .nav-link {
-            color: #888;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 8px 16px;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        #profile .nav-link:hover, .nav-link.active {
-            color: #fff;
-            background: linear-gradient(135deg, #0499c2, #00214d);
-            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
-        }
-
-        #profile .logo {
-            font-size: 20px;
-            font-weight: bold;
-            /* background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
-            -webkit-background-clip: text;
-            background-clip:text;
-            -webkit-text-fill-color: transparent; */
-            background:transparent;
-            margin-right: 20px;
-        }
-
-        #profile .content {
-            margin-top: 150px;
-            text-align: center;
-            padding: 50px 20px;
-        }
-
-        #profile .hero {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            color:white;
-        }
-
-        #profile .subtitle {
-            color: #888;
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Mobile */
-        @media (max-width: 768px) {
-            .navbar { 
-                left: 20px; 
-                right: 20px; 
-                transform: none; 
-                padding: 15px 20px;
-            }
-            .nav-menu { gap: 20px; flex-wrap: wrap; justify-content: center; }
-            .logo { margin-right: 0; margin-bottom: 10px; }
-            .hero { font-size: 2rem; }
-        }
 
 
 
@@ -348,6 +271,8 @@
   margin-bottom: var(--spacing-xs);
 }
 
+
+
 #profile .gradient-text {
   background: var(--accent-gradient);
   -webkit-background-clip: text;
@@ -357,7 +282,7 @@
 
 #profile .hero-description {
   font-size: 18px;
-  color: var(--text-secondary);
+  /* color: var(--text-secondary); */
   line-height: 1.6;
   margin-bottom: var(--spacing-xl);
   max-width: 500px;

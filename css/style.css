@@ -121,10 +121,10 @@ body {
         .logo {
             font-size: 20px;
             font-weight: bold;
-            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            /* background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
             -webkit-background-clip: text;
             background-clip:text;
-            -webkit-text-fill-color: transparent;
+            -webkit-text-fill-color: transparent; */
             margin-right: 20px;
         }
 
@@ -137,9 +137,9 @@ body {
         .hero {
             font-size: 3rem;
             margin-bottom: 20px;
-            background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1);
+            /* background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1);
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            -webkit-text-fill-color: transparent; */
             background-clip:text;
         }
 
