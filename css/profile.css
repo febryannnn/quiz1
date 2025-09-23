@@ -112,10 +112,11 @@
         #profile .logo {
             font-size: 20px;
             font-weight: bold;
-            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            /* background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
             -webkit-background-clip: text;
             background-clip:text;
-            -webkit-text-fill-color: transparent;
+            -webkit-text-fill-color: transparent; */
+            background:transparent;
             margin-right: 20px;
         }
 
