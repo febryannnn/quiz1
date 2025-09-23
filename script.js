@@ -2,12 +2,21 @@
 
 const navLinks = document.querySelectorAll(".nav-link");
 
-navLinks.forEach(link => {
+function setActiveNavbar(path) {
+  navLinks.forEach((link) => {
+    link.classList.remove(".active");
+    if (link.getAttribute("href") === path) {
+        console.log(`${link.getAttribute("href")} dan ${path}`)
+      link.classList.add("active");
+    }
+  });
+}
+navLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    navLinks.forEach(l => l.classList.remove("active"));
+    navLinks.forEach((l) => l.classList.remove("active"));
 
     link.classList.add("active");
-    console.log(link)
+    console.log(link);
   });
 });
 
@@ -19,11 +28,13 @@ const route = (event) => {
   window.history.pushState({}, "", path);
   //   console.log(path)
 
+  setActiveNavbar(path)
   handleLocation();
 };
 
 const style_css = document.getElementById("page-style");
 
+// untuk deploy di github
 const routes = {
   "/quiz1": { html: "/quiz1/pages-client/index.html", css: "/quiz1/css/style.css" },
   "/quiz1/profile": { html: "/quiz1/pages-client/profile-client.html", css: "/quiz1/css/profile.css" },
@@ -32,6 +43,7 @@ const routes = {
   "/quiz1/tourist": { html: "/quiz1/pages-client/tourist-client.html", css: "/quiz1/css/tourist.css" }
 };
 
+// untuk run di lokal
 // const routes = {
 //   "/quiz1": { html: "/pages-client/index.html", css: "css/style.css" },
 //   "/quiz1/profile": {
@@ -64,6 +76,14 @@ const handleLocation = async () => {
     style_css.setAttribute("href", route.css);
   }
 };
+
+window.addEventListener("load", () => {
+  setActiveNavbar(window.location.pathname);
+});
+
+window.addEventListener("popstate", () => {
+  setActiveNavbar(window.location.pathname);
+});
 
 window.onpopstate = handleLocation;
 window.route = route;
