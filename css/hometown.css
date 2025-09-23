@@ -152,7 +152,7 @@
 		--carousel-width: min(
 			80vw,
 			1200px
-		); /* note - it will "break" if it gets too wide and there aren't enough items */
+		); 
 		--carousel-item-width: 280px;
 		--carousel-item-height: 400px;
 		--carousel-item-gap: 2rem;
@@ -315,7 +315,7 @@
 }
 
 #hometown .carousel {
-  margin:50px 0 100px 0;
+  margin:80px 0 100px 0;
 }
 #hometown .carousel h2 {
   padding:10px;

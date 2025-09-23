@@ -1,0 +1,221 @@
+#tourist .container {
+  display: flex;
+  justify-content: center;
+}
+
+#tourist .hero h1 {
+  font-family: "Libertinus Serif Display", system-ui;
+  font-size: 100px;
+  font-weight: 700;
+  text-shadow:  2px 2px 2px rgba(0, 0, 0, 0);
+}
+
+#tourist .hero h1 span {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#tourist .hero h2 {
+  font-family: "Libertinus Serif Display", system-ui;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+#tourist * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+#tourist body {
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+#tourist nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+#tourist .logo {
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+#tourist .nav-links {
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+}
+
+#tourist .nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#tourist .cta {
+  background: #fff;
+  color: #000;
+  padding: 8px 20px;
+  border-radius: 2px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Hero Section */
+#tourist .hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding-top: 80px;
+}
+
+#tourist .hero h1 {
+  font-size: 100px;
+  font-weight: 800;
+}
+
+/* Floating Cards */
+#tourist .cards {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+#tourist .card {
+  position: absolute;
+  width: 220px;
+  height: 160px;
+  /* background: #444; */
+  border-radius: 10px;
+  /* overflow: hidden; */
+  /* filter: blur(4px); */
+}
+
+/* Posisi random biar mirip */
+#tourist .card1 {
+  top: 0%;
+  filter: blur(6px);
+  left: 0%;
+}
+#tourist .card2 {
+  top: 35%;
+  filter: blur(4px);
+  left: 3%;
+}
+#tourist .card3 {
+  bottom: 0%;
+  filter: blur(6px);
+  left: 20%;
+}
+#tourist .card4 {
+  bottom: 10%;
+  filter: blur(4px);
+  left: 50%;
+}
+
+#tourist .card5 {
+  top: 0%;
+  filter: blur(4px);
+  left: 45%;
+}
+#tourist .card6 {
+  top: 0%;
+  filter: blur(7px);
+  right: 10%;
+}
+#tourist .card7 {
+  bottom: 35%;
+  filter: blur(6px);
+  left: 73%;
+}
+#tourist .card8 {
+  bottom: 10%;
+  filter: blur(4px);
+  right: 15%;
+}
+#tourist .card9 {
+  bottom: 5%;
+  filter: blur(4px);
+  left:0%;
+}
+
+#tourist .card1 img {
+  width: 500px;
+  /* height:400px; */
+}
+#tourist .card2 img {
+  width: 350px;
+}
+#tourist .card3 img {
+  width: 250px;
+}
+#tourist .card4 img {
+  width: 200px;
+}
+
+#tourist .card5 img {
+  width: 300px;
+}
+#tourist .card6 img {
+  width: 300px;
+}
+#tourist .card7 img {
+  width: 450px;
+}
+#tourist .card8 img {
+  width: 300px;
+}
+#tourist .card9 img {
+  width: 200px;
+}
+
+/* Efek hover */
+#tourist .card {
+  pointer-events: auto;
+  transition: transform 0.6s ease, filter 0.6s ease;
+  cursor: pointer;
+}
+
+#tourist .card:hover {
+  transform: scale(1.08) rotate(2deg);
+  filter: blur(0) brightness(1.2);
+  z-index: 99;
+}
+
+/* Animasi floating otomatis */
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+#tourist .card1 { animation: floatUpDown 6s ease-in-out infinite; }
+#tourist .card2 { animation: floatUpDown 7s ease-in-out infinite; }
+#tourist .card3 { animation: floatUpDown 5s ease-in-out infinite; }
+#tourist .card4 { animation: floatUpDown 8s ease-in-out infinite; }
+#tourist .card5 { animation: floatUpDown 6.5s ease-in-out infinite; }
+#tourist .card6 { animation: floatUpDown 7.5s ease-in-out infinite; }
+#tourist .card7 { animation: floatUpDown 5.5s ease-in-out infinite; }
+#tourist .card8 { animation: floatUpDown 8.5s ease-in-out infinite; }
+#tourist .card9 { animation: floatUpDown 6.2s ease-in-out infinite; }
