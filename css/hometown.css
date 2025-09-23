@@ -154,7 +154,7 @@
 			1200px
 		); /* note - it will "break" if it gets too wide and there aren't enough items */
 		--carousel-item-width: 280px;
-		--carousel-item-height: 430px;
+		--carousel-item-height: 400px;
 		--carousel-item-gap: 2rem;
 
 		--clr-cta: rgb(0, 132, 209);
