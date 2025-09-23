@@ -69,13 +69,13 @@ const handleLocation = async () => {
   }
 };
 
-window.addEventListener("load", () => {
-  setActiveNavbar(window.location.pathname);
-});
+// window.addEventListener("load", () => {
+//   setActiveNavbar(window.location.pathname);
+// });
 
-window.addEventListener("popstate", () => {
-  setActiveNavbar(window.location.pathname);
-});
+// window.addEventListener("popstate", () => {
+//   setActiveNavbar(window.location.pathname);
+// });
 
 window.onpopstate = handleLocation;
 window.route = route;
