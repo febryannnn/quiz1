@@ -2,15 +2,15 @@
 
 const navLinks = document.querySelectorAll(".nav-link");
 
-function setActiveNavbar(path) {
-  navLinks.forEach((link) => {
-    // link.classList.remove(".active");
-    if (link.getAttribute("href") === path) {
-        console.log(`${link.getAttribute("href")} dan ${path}`)
-      link.classList.add("active");
-    }
-  });
-}
+// function setActiveNavbar(path) {
+//   navLinks.forEach((link) => {
+//     // link.classList.remove(".active");
+//     if (link.getAttribute("href") === path) {
+//         console.log(`${link.getAttribute("href")} dan ${path}`)
+//       link.classList.add("active");
+//     }
+//   });
+// }
 
 const route = (event) => {
   // console.log(event);
@@ -20,7 +20,7 @@ const route = (event) => {
   window.history.pushState({}, "", path);
   //   console.log(path)
 
-  setActiveNavbar(path)
+//   setActiveNavbar(path)
   handleLocation();
 };
 
