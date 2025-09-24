@@ -27,34 +27,34 @@ const route = (event) => {
 const style_css = document.getElementById("page-style");
 
 // untuk deploy di github
-const routes = {
-  "/quiz1": { html: "/quiz1/pages-client/index.html", css: "/quiz1/css/style.css" },
-  "/quiz1/profile": { html: "/quiz1/pages-client/profile-client.html", css: "/quiz1/css/profile.css" },
-  "/quiz1/hometown": { html: "/quiz1/pages-client/hometown-client.html", css: "/quiz1/css/hometown.css" },
-  "/quiz1/food": { html: "/quiz1/pages-client/food-client.html", css: "/quiz1/css/food.css" },
-  "/quiz1/tourist": { html: "/quiz1/pages-client/tourist-client.html", css: "/quiz1/css/tourist.css" }
-};
+// const routes = {
+//   "/quiz1": { html: "/quiz1/pages-client/index.html", css: "/quiz1/css/style.css" },
+//   "/quiz1/profile": { html: "/quiz1/pages-client/profile-client.html", css: "/quiz1/css/profile.css" },
+//   "/quiz1/hometown": { html: "/quiz1/pages-client/hometown-client.html", css: "/quiz1/css/hometown.css" },
+//   "/quiz1/food": { html: "/quiz1/pages-client/food-client.html", css: "/quiz1/css/food.css" },
+//   "/quiz1/tourist": { html: "/quiz1/pages-client/tourist-client.html", css: "/quiz1/css/tourist.css" }
+// };
 
 // untuk run di lokal
-// const routes = {
-//   "/quiz1": { html: "/pages-client/index.html", css: "css/style.css" },
-//   "/quiz1/profile": {
-//     html: "/pages-client/profile-client.html",
-//     css: "/css/profile.css",
-//   },
-//   "/quiz1/hometown": {
-//     html: "/pages-client/hometown-client.html",
-//     css: "/css/hometown.css",
-//   },
-//   "/quiz1/food": {
-//     html: "/pages-client/food-client.html",
-//     css: "/css/food.css",
-//   },
-//   "/quiz1/tourist": {
-//     html: "/pages-client/tourist-client.html",
-//     css: "/css/tourist.css",
-//   },
-// };
+const routes = {
+  "/quiz1": { html: "/pages-client/index.html", css: "css/style.css" },
+  "/quiz1/profile": {
+    html: "/pages-client/profile-client.html",
+    css: "/css/profile.css",
+  },
+  "/quiz1/hometown": {
+    html: "/pages-client/hometown-client.html",
+    css: "/css/hometown.css",
+  },
+  "/quiz1/food": {
+    html: "/pages-client/food-client.html",
+    css: "/css/food.css",
+  },
+  "/quiz1/tourist": {
+    html: "/pages-client/tourist-client.html",
+    css: "/css/tourist.css",
+  },
+};
 
 const handleLocation = async () => {
   const path = window.location.pathname;
@@ -81,3 +81,17 @@ window.onpopstate = handleLocation;
 window.route = route;
 
 handleLocation();
+
+
+window.addEventListener("scroll", function () {
+  const section = document.querySelector("#tourist .kotak-kotak");
+  const wrapper = document.querySelector(".cards");
+
+  const rect = section.getBoundingClientRect();
+
+  if (rect.top <= window.innerHeight / 2 && rect.bottom >= 0) {
+    wrapper.classList.add("dark");   // cards + background jadi gelap
+  } else {
+    wrapper.classList.remove("dark"); // normal lagi
+  }
+});
