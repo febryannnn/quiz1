@@ -271,7 +271,9 @@
 }
 
 #food .wave-container {
-    margin:120px 0 0 60px;
+    display:flex;
+    justify-content: center;
+    margin:120px 0 0 0px;
 }
 #food .wave-text {
   font-family: "Inter", sans-serif;
